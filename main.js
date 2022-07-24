@@ -1,30 +1,29 @@
 // Whiteboard, make a code plan and build each of the following methods:
 
 // .map() - function that takes an array of items and a function that returns an array with each item manipulated by that function.
-const numbers = [65, 44, 12, 4];
-const newArr = numbers.map(myFunction)
 
 
 // .reduce() - function that takes an array of food orders with their amounts and returns the total amount of all the food orders.
-let motorcycles = [{motorcycles:"harley", cost: 1000}, {motorcycles:"ducati", cost: 1000}, {motorcycles:"suzuki", cost: 800}, {motorcycles:"kawasaki", cost: 800}, {motorcycles:"indian", cost: 900}]
+let motorcycles = [{item:"harley", cost: 1000.00}, {item:"ducati", cost: 1000.00}, {item:"suzuki", cost: 800.00}, {item:"kawasaki", cost: 800.00}, {item:"indian", cost: 900.00}]
 
-for (let i = 0; i < motorcycles.length; i++) {
-    sum += numbers[i];
-}
+let cost = motorcycles.map((money) => money.cost)
 
-
-motorcycles.reduce(function(total, currentValue, currentIndex, arr), initialValue)
-
-motorcycles.reduce(function(total, currentValue, currentIndex, arr), initialValue)
-
-
-
-reduce()
+let total = cost.reduce((sum, current) => sum + current,0);
+  console.log ("Total",total)
 
 
 // .filter() - function that takes an array of items and a function that returns an array with only the items that return true in the function.
 filter()
+let motorcycles = [{item:"harley", type: 1.00}, {item:"ducati", type: 2.00}, {item:"suzuki", type: 2.00}, {item:"kawasaki", type: 2.00}, {item:"indian", type: 1.00}]
 
+
+let importedMotorcycles = [];
+for (let i = 0; i < motorcycles.length; i++) {
+    if (motorcycles[i].type > 1) {
+        importedMotorcycles.push(motorcycles[i]);
+    }
+}
+console.log(importedMotorcycles);
 
 // Create a repo called "Higher-Order-From-Scratch".
 
